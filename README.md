@@ -10,10 +10,10 @@ Static 2-page site for RankFlow, the all-in-one SEO platform for agencies. No bu
 | `support.html` | RankFlow help and demo requests (linked in every header and footer; default `DEMO_URL`) |
 | `js/config.js` | **All settings**: `LEAD_WEBHOOK_URL`, `RANKFLOW_URL`, `DEMO_URL`, `SUPPORT_URL`, pixel IDs, contact email, video reviews |
 
-`RANKFLOW_URL` is `#` until the signup link is ready. `LEAD_WEBHOOK_URL` is blank until the webhook is pasted in. An empty webhook skips the POST and still redirects to `main.html`.
+`RANKFLOW_URL` is `https://app.rankflowseo.ai/` and opens in a new tab. `LEAD_WEBHOOK_URL` is blank until the webhook is pasted in. An empty webhook skips the POST and still redirects to `main.html`.
 
 ## Swapping assets
 - Client result screenshots: `assets/results/{melissa,bilal,kaden,adelina}.jpg` plus `.webp` (about 900px wide, native aspect ratios, shown uncropped, click to zoom). Order on the page: Melissa, Kaden, Bilal, Adelina. Desktop columns: left Melissa then Bilal, right Kaden then Adelina.
-- Video review: `assets/videos/review-1.mp4` + `review-1.jpg`. Second review: add `review-2.mp4/.jpg` and edit the 2nd entry of `REVIEW_VIDEOS` in `js/config.js`.
+- Video reviews (both `index.html` and `main.html`, left then right): `assets/videos/review-1.mp4` + `assets/videos/review-1.jpg`, then `assets/videos/review3.mp4` + `assets/review3-poster.jpg`. Edit `REVIEW_VIDEOS` in `js/config.js`.
 - Founder photo: `assets/andre.jpg` (about section on `main.html`).
 - Logo: `assets/logo.webp` with `assets/logo.png` fallback. Favicon: `assets/favicon.png`.

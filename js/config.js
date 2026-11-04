@@ -12,7 +12,7 @@ window.SITE_CONFIG = {
   NEXT_PAGE: "main.html",              // where the form sends people after submit
 
   /* ---- Secondary page buttons ------------------------------- */
-  RANKFLOW_URL: "#",                   // "Get RankFlow Access" – replace with the signup URL
+  RANKFLOW_URL: "https://app.rankflowseo.ai/",  // "Get RankFlow Access" – opens in a new tab
   DEMO_URL: "support.html",            // "Book a RankFlow Demo"
   SUPPORT_URL: "support.html",         // "Need help with RankFlow?" button
 
@@ -25,12 +25,10 @@ window.SITE_CONFIG = {
   /* ---- Contact (privacy / terms / help button) -------------- */
   CONTACT_EMAIL: "support@wealthlinkmedia.com",
 
-  /* ---- Video reviews (secondary page) -----------------------
-     Right now the same review is used twice. To add the second
-     review: upload the files to assets/videos/ and change the
-     second entry's src / poster / name.                         */
+  /* ---- Video reviews (index + main) -------------------------
+     Left card is the original review. Right card is review 3.   */
   REVIEW_VIDEOS: [
     { name: "Client review 1", src: "assets/videos/review-1.mp4", poster: "assets/videos/review-1.jpg" },
-    { name: "Client review 2", src: "assets/videos/review-1.mp4", poster: "assets/videos/review-1.jpg" }
+    { name: "Client review 3", src: "assets/videos/review3.mp4", poster: "assets/review3-poster.jpg" }
   ]
 };
