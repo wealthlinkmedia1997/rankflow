@@ -148,6 +148,9 @@ a{color:var(--gold-hi)}
 .bonus:last-child{border-bottom:0}
 .bonus h3{font-size:26px;font-weight:700;margin:0 0 12px;line-height:1.3}
 .bonus p{font-size:19px;line-height:1.5;margin:0 0 12px;color:#efe9d6}
+.bonus ul{margin:0;padding-left:22px}
+.bonus li{font-size:19px;line-height:1.5;margin:0 0 8px;color:#efe9d6}
+.bonus li:last-child{margin-bottom:0}
 .bonus .val{display:block;text-align:left;font-family:Montserrat,Arial,sans-serif;font-weight:700;font-size:20px;color:var(--gold-hi);text-decoration:underline;margin-top:6px}
 .rf-more{display:inline-flex;align-items:center;margin-top:16px;padding:11px 16px;border:2px solid var(--gold);border-radius:8px;background:transparent;color:var(--gold-hi);font-family:Montserrat,Arial,sans-serif;font-weight:700;font-size:16px;line-height:1.3;text-decoration:none}
 .rf-more:hover{background:rgba(197,154,46,.14);color:#fff}
@@ -281,7 +284,7 @@ a{color:var(--gold-hi)}
   .bonus-head h2{font-size:28px}
   .bonus-head .worth{font-size:18px}
   .bonus h3{font-size:22px}
-  .bonus p,.step p,.contact-card p,.about-grid .txt{font-size:16.5px}
+  .bonus p,.bonus li,.step p,.contact-card p,.about-grid .txt{font-size:16.5px}
   .guarantee h2{font-size:32px;margin-top:48px}
   .guarantee .g-body{font-size:16.5px}
   .faq h2,.about h2{font-size:28px}
