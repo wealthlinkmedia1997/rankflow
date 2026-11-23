@@ -107,22 +107,13 @@
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeImg(); });
   }
 
-  /* ---------- Opt-in survey (one question at a time) ---------- */
-  var fModal = $("#lead-modal");
+  /* ---------- Opt-in survey (inline, one question at a time) ---------- */
   var form = $("#lead-form");
-  if (fModal && form) {
+  if (form) {
     var STEPS = ["agency", "bottleneck", "clients", "revenue", "contact"];
     var RADIO = { agency: "agency_type", bottleneck: "bottleneck", clients: "client_count" };
     var index = 0;
     var submitted = false;
-
-    var openForm = function () {
-      fModal.classList.add("open"); document.body.classList.add("noscroll");
-    };
-    var closeForm = function () { fModal.classList.remove("open"); document.body.classList.remove("noscroll"); };
-    $$("[data-open-form]").forEach(function (b) { b.addEventListener("click", function (e) { e.preventDefault(); openForm(); }); });
-    $$("[data-close-form]", fModal).forEach(function (b) { b.addEventListener("click", closeForm); });
-    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && fModal.classList.contains("open")) closeForm(); });
 
     function digitsOnly(v) { return String(v || "").replace(/\D/g, ""); }
     function fieldValue(name) {

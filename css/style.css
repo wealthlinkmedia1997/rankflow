@@ -417,29 +417,20 @@ a{color:var(--gold-hi)}
   color:#24384A;
   text-wrap:pretty;
 }
-.p-home .home-cta{
-  background:linear-gradient(180deg,#12748A 0%,#0C5E72 55%,#084556 100%);
-  color:#fff;
-  font-family:inherit;
-  font-size:19px;
-  font-weight:700;
-  letter-spacing:-0.01em;
-  padding:20px 46px;
-  border-radius:10px;
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 1px 2px rgba(7,24,40,.18),0 8px 20px rgba(12,94,114,.28);
-}
-.p-home .home-cta:hover{
-  background:linear-gradient(180deg,#0E6A80 0%,#0A5264 55%,#073E4C 100%);
-  color:#fff;
-  filter:none;
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 2px 4px rgba(7,24,40,.2),0 14px 28px rgba(12,94,114,.34);
-}
 .p-home .home-note{
   margin:0;
   font-size:18px;
   font-weight:400;
   line-height:1.45;
   color:#24384A;
+}
+.p-home #vsl[hidden]{
+  display:none;
+  height:0;
+  margin:0;
+  padding:0;
+  overflow:hidden;
+  border:0;
 }
 .p-home .results-grid figure{
   background:#fff;
@@ -455,19 +446,18 @@ a{color:var(--gold-hi)}
 .p-home .footer-links a{color:#0B1F33}
 .p-home .footer-links a:hover,
 .p-home .footer-links a[aria-current="page"]{color:#0C5E72}
-.p-home #lead-modal .modal-card{
-  max-width:560px;
-  max-height:calc(100vh - 36px);
-  overflow:auto;
+.p-home .form-shell{
+  width:100%;
+  max-width:640px;
+  box-sizing:border-box;
+  padding:22px 22px 18px;
   background:#fff;
   color:#0B1F33;
   border:1px solid #D5E3EA;
-  box-shadow:0 20px 60px rgba(7,24,40,.18);
+  border-radius:4px;
   text-align:center;
 }
-.p-home #lead-modal .modal-x{color:#3A5164}
-.p-home #lead-modal .modal-x:hover{color:#0B1F33;background:#F4F8F9}
-.p-home #lead-modal .step-count{
+.p-home .form-shell .step-count{
   margin:0 0 10px;
   font-size:13px;
   font-weight:800;
@@ -475,22 +465,22 @@ a{color:var(--gold-hi)}
   text-transform:uppercase;
   color:#3A5164;
 }
-.p-home #lead-modal .form-progress{
+.p-home .form-shell .form-progress{
   height:3px;
   background:#D5E3EA;
   border-radius:2px;
   overflow:hidden;
   margin:0 0 18px;
 }
-.p-home #lead-modal .form-progress i{
+.p-home .form-shell .form-progress i{
   display:block;
   height:100%;
   width:0;
   background:linear-gradient(90deg,#084556,#12748A 60%,#F3C15A);
 }
-.p-home #lead-modal .field{margin:0}
-.p-home #lead-modal .field.is-hidden{display:none}
-.p-home #lead-modal .choice-list{
+.p-home .form-shell .field{margin:0}
+.p-home .form-shell .field.is-hidden{display:none}
+.p-home .form-shell .choice-list{
   margin:0;
   padding:0;
   border:0;
@@ -498,7 +488,7 @@ a{color:var(--gold-hi)}
   flex-direction:column;
   gap:10px;
 }
-.p-home #lead-modal .choice-list legend{
+.p-home .form-shell .choice-list legend{
   float:none;
   width:100%;
   margin:0 0 4px;
@@ -509,7 +499,7 @@ a{color:var(--gold-hi)}
   color:#0B1F33;
   text-wrap:balance;
 }
-.p-home #lead-modal .choice{
+.p-home .form-shell .choice{
   display:flex;
   align-items:center;
   justify-content:center;
@@ -528,28 +518,28 @@ a{color:var(--gold-hi)}
   color:#0B1F33;
   cursor:pointer;
 }
-.p-home #lead-modal .choice input{
+.p-home .form-shell .choice input{
   width:18px;
   height:18px;
   margin:0;
   flex:0 0 auto;
   accent-color:#0C5E72;
 }
-.p-home #lead-modal .choice:has(input:checked){
+.p-home .form-shell .choice:has(input:checked){
   border-color:#0C5E72;
   background:#E7F4F7;
   box-shadow:0 0 0 3px rgba(12,94,114,.15);
 }
-.p-home #lead-modal .field-error{
+.p-home .form-shell .field-error{
   display:none;
   margin:8px 0 0;
   font-size:13px;
   font-weight:700;
   color:#6B4A08;
 }
-.p-home #lead-modal .field.has-error .field-error{display:block}
-.p-home #lead-modal .select-label,
-.p-home #lead-modal .field[data-step="contact"] label{
+.p-home .form-shell .field.has-error .field-error{display:block}
+.p-home .form-shell .select-label,
+.p-home .form-shell .field[data-step="contact"] label{
   display:block;
   margin:14px 0 6px;
   text-align:center;
@@ -559,11 +549,11 @@ a{color:var(--gold-hi)}
   font-weight:800;
   color:#0B1F33;
 }
-.p-home #lead-modal .select-label:first-of-type,
-.p-home #lead-modal .field[data-step="contact"] label:first-child{margin-top:8px}
-.p-home #lead-modal select,
-.p-home #lead-modal input[type="text"],
-.p-home #lead-modal input[type="tel"]{
+.p-home .form-shell .select-label:first-of-type,
+.p-home .form-shell .field[data-step="contact"] label:first-child{margin-top:8px}
+.p-home .form-shell select,
+.p-home .form-shell input[type="text"],
+.p-home .form-shell input[type="tel"]{
   width:100%;
   margin:0;
   padding:14px 16px;
@@ -577,19 +567,19 @@ a{color:var(--gold-hi)}
   text-align:center;
   text-align-last:center;
 }
-.p-home #lead-modal select:focus,
-.p-home #lead-modal input[type="text"]:focus,
-.p-home #lead-modal input[type="tel"]:focus{
+.p-home .form-shell select:focus,
+.p-home .form-shell input[type="text"]:focus,
+.p-home .form-shell input[type="tel"]:focus{
   outline:none;
   border-color:#0C5E72;
   box-shadow:0 0 0 3px rgba(12,94,114,.2);
 }
-.p-home #lead-modal .field.has-error select,
-.p-home #lead-modal .field[data-step="contact"].has-error input.is-invalid{
+.p-home .form-shell .field.has-error select,
+.p-home .form-shell .field[data-step="contact"].has-error input.is-invalid{
   border-color:#6B4A08;
   box-shadow:0 0 0 3px rgba(107,74,8,.18);
 }
-.p-home #lead-modal .cta{
+.p-home .form-shell .cta{
   display:flex;
   width:100%;
   align-items:center;
@@ -607,18 +597,18 @@ a{color:var(--gold-hi)}
   cursor:pointer;
   box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 8px 20px rgba(12,94,114,.28);
 }
-.p-home #lead-modal .cta:hover{
+.p-home .form-shell .cta:hover{
   background:linear-gradient(180deg,#0E6A80 0%,#0A5264 55%,#073E4C 100%);
   color:#fff;
 }
-.p-home #lead-modal .cta[disabled]{opacity:.7;cursor:default}
-.p-home #lead-modal .fine-print{
+.p-home .form-shell .cta[disabled]{opacity:.7;cursor:default}
+.p-home .form-shell .fine-print{
   margin:10px 0 0;
   font-size:13px;
   font-weight:400;
   color:#3A5164;
 }
-.p-home #lead-modal .form-back{
+.p-home .form-shell .form-back{
   display:block;
   margin:14px auto 0;
   padding:8px 12px;
@@ -630,12 +620,13 @@ a{color:var(--gold-hi)}
   font-size:15px;
   cursor:pointer;
 }
-.p-home #lead-modal .form-back[hidden]{display:none !important}
+.p-home .form-shell .form-back[hidden]{display:none !important}
 .p-home .video-modal .modal-x{color:#fff}
 @media (max-width:760px){
   .p-home .home-hero{padding-top:40px;gap:22px}
   .p-home .home-hero h1{font-size:30px;line-height:1.36}
   .p-home .home-sub{font-size:18px}
   .p-home .home-note{font-size:16px}
-  .p-home .home-cta{width:100%;max-width:420px;font-size:18px;padding:19px 22px}
+  .p-home .form-shell{padding:16px 14px 14px}
+  .p-home .form-shell .cta{font-size:18px;padding:19px 22px}
 }
