@@ -358,3 +358,140 @@ a{color:var(--gold-hi)}
   .rf-end h2{font-size:28px}
   .rf-end{margin-top:40px}
 }
+
+/* ======================================================
+   OPT-IN PAGE — editorial light theme
+   Scoped to .p-home so main.html keeps the dark theme.
+   Type, scale, eyebrow, and button match the water-damage page.
+   ====================================================== */
+.p-home{
+  background:#fff;
+  color:#0B1F33;
+  color-scheme:light;
+  font-family:"Manrope","Segoe UI","Avenir Next",system-ui,sans-serif;
+}
+.p-home .site-header{
+  background:#fff;
+  border-bottom:1px solid #D5E3EA;
+}
+.p-home .header-nav a{color:#0B1F33}
+.p-home .header-nav a:hover,
+.p-home .header-nav a[aria-current="page"]{color:#0C5E72}
+.p-home .header-nav a:focus-visible,
+.p-home .brand:focus-visible{outline-color:#0C5E72}
+.p-home .home-hero{
+  width:100%;
+  max-width:860px;
+  margin:0 auto;
+  padding:56px 0 8px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:28px;
+  text-align:center;
+}
+.p-home .home-eyebrow{
+  margin:0;
+  font-size:14px;
+  font-weight:700;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  color:#3A5164;
+}
+.p-home .home-hero h1{
+  margin:0;
+  max-width:860px;
+  font-size:46px;
+  line-height:1.34;
+  font-weight:800;
+  letter-spacing:-0.02em;
+  color:#0B1F33;
+  text-wrap:balance;
+}
+.p-home .home-sub{
+  margin:6px 0 0;
+  max-width:720px;
+  font-size:24px;
+  line-height:1.5;
+  font-weight:400;
+  color:#24384A;
+  text-wrap:pretty;
+}
+.p-home .home-cta{
+  background:linear-gradient(180deg,#12748A 0%,#0C5E72 55%,#084556 100%);
+  color:#fff;
+  font-family:inherit;
+  font-size:19px;
+  font-weight:700;
+  letter-spacing:-0.01em;
+  padding:20px 46px;
+  border-radius:10px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 1px 2px rgba(7,24,40,.18),0 8px 20px rgba(12,94,114,.28);
+}
+.p-home .home-cta:hover{
+  background:linear-gradient(180deg,#0E6A80 0%,#0A5264 55%,#073E4C 100%);
+  color:#fff;
+  filter:none;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 2px 4px rgba(7,24,40,.2),0 14px 28px rgba(12,94,114,.34);
+}
+.p-home .home-note{
+  margin:0;
+  font-size:18px;
+  font-weight:400;
+  line-height:1.45;
+  color:#24384A;
+}
+.p-home .results-grid figure{
+  background:#fff;
+  border-color:#D5E3EA;
+  box-shadow:0 8px 30px rgba(7,24,40,.08);
+}
+.p-home .site-footer{
+  background:#fff;
+  border-top:1px solid #D5E3EA;
+  font-family:inherit;
+}
+.p-home .footer-copy,
+.p-home .footer-links a{color:#0B1F33}
+.p-home .footer-links a:hover,
+.p-home .footer-links a[aria-current="page"]{color:#0C5E72}
+.p-home #lead-modal .modal-card{
+  background:#fff;
+  color:#0B1F33;
+  border:1px solid #D5E3EA;
+  box-shadow:0 20px 60px rgba(7,24,40,.18);
+}
+.p-home #lead-modal .modal-x{color:#3A5164}
+.p-home #lead-modal .modal-x:hover{color:#0B1F33;background:#F4F8F9}
+.p-home #lead-modal .modal-card h2{color:#0B1F33}
+.p-home #lead-modal .modal-card p.msub{color:#24384A}
+.p-home #lead-modal .modal-card label{color:#084556}
+.p-home #lead-modal .modal-card input{
+  background:#fff;
+  color:#0B1F33;
+  border:1px solid #D5E3EA;
+}
+.p-home #lead-modal .modal-card input:focus{
+  border-color:#0C5E72;
+  box-shadow:0 0 0 3px rgba(12,94,114,.22);
+}
+.p-home #lead-modal .modal-card .btn{
+  background:linear-gradient(180deg,#12748A 0%,#0C5E72 55%,#084556 100%);
+  color:#fff;
+  font-family:inherit;
+}
+.p-home #lead-modal .modal-card .btn:hover{
+  background:linear-gradient(180deg,#0E6A80 0%,#0A5264 55%,#073E4C 100%);
+  color:#fff;
+  filter:none;
+}
+.p-home .lf-fine{color:#4E6576}
+.p-home .lf-fine a{color:#0C5E72}
+.p-home .video-modal .modal-x{color:#fff}
+@media (max-width:760px){
+  .p-home .home-hero{padding-top:40px;gap:22px}
+  .p-home .home-hero h1{font-size:30px;line-height:1.36}
+  .p-home .home-sub{font-size:18px}
+  .p-home .home-note{font-size:16px}
+  .p-home .home-cta{width:100%;max-width:420px;font-size:18px;padding:19px 22px}
+}
