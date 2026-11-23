@@ -370,15 +370,6 @@ a{color:var(--gold-hi)}
   color-scheme:light;
   font-family:"Manrope","Segoe UI","Avenir Next",system-ui,sans-serif;
 }
-.p-home .site-header{
-  background:#fff;
-  border-bottom:1px solid #D5E3EA;
-}
-.p-home .header-nav a{color:#0B1F33}
-.p-home .header-nav a:hover,
-.p-home .header-nav a[aria-current="page"]{color:#0C5E72}
-.p-home .header-nav a:focus-visible,
-.p-home .brand:focus-visible{outline-color:#0C5E72}
 .p-home .home-hero{
   width:100%;
   max-width:860px;
