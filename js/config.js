@@ -3,13 +3,17 @@
    Everything you will likely need to change lives in this file.
    ============================================================ */
 window.SITE_CONFIG = {
-  /* ---- Lead capture (primary page form) ---------------------
-     Paste the inbound-webhook URL here.
-     While this is empty ("") the form skips the POST and just
-     redirects to the secondary page.                           */
+  /* ---- Opt-in survey ---------------------------------------
+     TODO: paste the GoHighLevel inbound-webhook URL here.
+     Left empty on purpose. Do not invent a URL.
+     While this is empty ("") the survey skips the POST and still
+     redirects to NEXT_PAGE after a valid step 5.
+     LEAD_WEBHOOK_URL is only used if RANKFLOW_WEBHOOK_URL is blank
+     and that older constant has been filled in.                 */
+  RANKFLOW_WEBHOOK_URL: "",
   LEAD_WEBHOOK_URL: "",
-  LEAD_SOURCE: "rankflow-lp-primary",  // sent as "source" in the payload
-  NEXT_PAGE: "main.html",              // where the form sends people after submit
+  LEAD_SOURCE: "rankflow-optin",
+  NEXT_PAGE: "main.html",              // where the survey sends people after submit
 
   /* ---- Secondary page buttons ------------------------------- */
   RANKFLOW_URL: "https://app.rankflowseo.ai/",  // "Get RankFlow Access" – opens in a new tab

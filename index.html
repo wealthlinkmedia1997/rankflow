@@ -92,25 +92,100 @@
   </div>
 </footer>
 
-<!-- Lead form modal -->
-<div class="modal" id="lead-modal" role="dialog" aria-modal="true" aria-labelledby="lf-title">
+<!-- Survey modal. One question at a time, same rhythm as the water-damage survey. -->
+<div class="modal" id="lead-modal" role="dialog" aria-modal="true" aria-labelledby="step-count">
   <div class="modal-card">
     <button type="button" class="modal-x" data-close-form aria-label="Close">&times;</button>
-    <picture class="mlogo">
-      <source srcset="assets/logo.webp" type="image/webp">
-      <img src="assets/logo.png" alt="WealthLink Media" width="961" height="187">
-    </picture>
-    <h2 id="lf-title">Watch the 2-Minute Video</h2>
-    <p class="msub">Enter your name and email and I'll take you straight to the next step.</p>
-    <form id="lead-form" novalidate autocomplete="on">
-      <label for="lf-name">Your name</label>
-      <input id="lf-name" name="name" type="text" autocomplete="name" placeholder="John Smith" required>
-      <label for="lf-email">Your email</label>
-      <input id="lf-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required>
-      <div class="lf-error" id="lf-error" role="alert"></div>
-      <button type="submit" class="btn" id="lf-submit">Watch the 2-Minute Video</button>
+    <form id="lead-form" class="lead-form" novalidate autocomplete="on">
+      <p class="step-count" id="step-count">Question 1 of 5</p>
+      <div class="form-progress" aria-hidden="true"><i></i></div>
+
+      <div class="field is-open" data-step="agency">
+        <div class="field-inner">
+          <fieldset class="choice-list">
+            <legend>Which best describes your agency?</legend>
+            <label class="choice"><input type="radio" name="agency_type" value="SEO agency"> SEO agency</label>
+            <label class="choice"><input type="radio" name="agency_type" value="Marketing or advertising agency"> Marketing or advertising agency</label>
+            <label class="choice"><input type="radio" name="agency_type" value="Web design agency adding SEO services"> Web design agency adding SEO services</label>
+            <label class="choice"><input type="radio" name="agency_type" value="I'm just getting started"> I'm just getting started</label>
+          </fieldset>
+          <p class="field-error">Choose the option that fits your agency.</p>
+        </div>
+      </div>
+
+      <div class="field is-hidden" data-step="bottleneck">
+        <div class="field-inner">
+          <fieldset class="choice-list">
+            <legend>What's your biggest bottleneck right now?</legend>
+            <label class="choice"><input type="radio" name="bottleneck" value="Getting new clients"> Getting new clients</label>
+            <label class="choice"><input type="radio" name="bottleneck" value="Fulfilling the SEO work for clients I have"> Fulfilling the SEO work for clients I have</label>
+            <label class="choice"><input type="radio" name="bottleneck" value="Clients churning too early"> Clients churning too early</label>
+            <label class="choice"><input type="radio" name="bottleneck" value="Both getting clients and fulfillment"> Both getting clients and fulfillment</label>
+          </fieldset>
+          <p class="field-error">Choose your biggest bottleneck.</p>
+        </div>
+      </div>
+
+      <div class="field is-hidden" data-step="clients">
+        <div class="field-inner">
+          <fieldset class="choice-list">
+            <legend>How many clients do you have right now?</legend>
+            <label class="choice"><input type="radio" name="client_count" value="0 (just getting started)"> 0 (just getting started)</label>
+            <label class="choice"><input type="radio" name="client_count" value="1 to 3"> 1 to 3</label>
+            <label class="choice"><input type="radio" name="client_count" value="4 to 10"> 4 to 10</label>
+            <label class="choice"><input type="radio" name="client_count" value="11 to 25"> 11 to 25</label>
+            <label class="choice"><input type="radio" name="client_count" value="25 or more"> 25 or more</label>
+          </fieldset>
+          <p class="field-error">Choose how many clients you have.</p>
+        </div>
+      </div>
+
+      <div class="field is-hidden" data-step="revenue">
+        <div class="field-inner">
+          <fieldset class="choice-list">
+            <legend>Where are you at monthly right now, and where do you want to be?</legend>
+            <label class="select-label" for="current-revenue">Current monthly revenue</label>
+            <select id="current-revenue" name="current_revenue">
+              <option value="">Select current revenue</option>
+              <option>Under $5K</option>
+              <option>$5K-$10K</option>
+              <option>$10K-$25K</option>
+              <option>$25K-$50K</option>
+              <option>$50K-$100K</option>
+              <option>$100K+</option>
+            </select>
+            <label class="select-label" for="target-revenue">Target monthly revenue</label>
+            <select id="target-revenue" name="target_revenue">
+              <option value="">Select target revenue</option>
+              <option>Under $5K</option>
+              <option>$5K-$10K</option>
+              <option>$10K-$25K</option>
+              <option>$25K-$50K</option>
+              <option>$50K-$100K</option>
+              <option>$100K+</option>
+            </select>
+          </fieldset>
+          <p class="field-error">Choose both your current and target monthly revenue.</p>
+          <button type="button" class="cta form-next">Continue</button>
+        </div>
+      </div>
+
+      <div class="field is-hidden" data-step="contact">
+        <div class="field-inner">
+          <label for="first-name">First name</label>
+          <input type="text" id="first-name" name="first_name" autocomplete="given-name" maxlength="80">
+          <label for="company-name">Company name</label>
+          <input type="text" id="company-name" name="company_name" autocomplete="organization" maxlength="120">
+          <label for="phone">Phone number</label>
+          <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" autocomplete="tel" inputmode="tel">
+          <p class="field-error" id="contact-error">Enter your first name, company name, and a 10-digit phone number.</p>
+          <button type="submit" class="cta" id="lf-submit">Call Me Within 5 Minutes</button>
+          <p class="fine-print">Free community access. We call within 5 minutes.</p>
+        </div>
+      </div>
+
+      <button type="button" class="form-back" hidden>Back</button>
     </form>
-    <p class="lf-fine">By continuing you agree to our <a href="terms.html" target="_blank" rel="noopener">Terms &amp; Conditions</a> and <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.</p>
   </div>
 </div>
 
