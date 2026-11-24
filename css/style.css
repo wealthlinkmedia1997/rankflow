@@ -433,6 +433,7 @@ a{color:var(--gold-hi)}
   border-top:1px solid #D5E3EA;
   font-family:inherit;
 }
+.p-home .footer-inner{padding-top:22px;padding-bottom:26px}
 .p-home .footer-copy,
 .p-home .footer-links a{color:#0B1F33}
 .p-home .footer-links a:hover,
