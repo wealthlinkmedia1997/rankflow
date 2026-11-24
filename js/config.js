@@ -4,13 +4,11 @@
    ============================================================ */
 window.SITE_CONFIG = {
   /* ---- Opt-in survey ---------------------------------------
-     TODO: paste the GoHighLevel inbound-webhook URL here.
-     Left empty on purpose. Do not invent a URL.
      While this is empty ("") the survey skips the POST and still
      redirects to NEXT_PAGE after a valid step 5.
      LEAD_WEBHOOK_URL is only used if RANKFLOW_WEBHOOK_URL is blank
      and that older constant has been filled in.                 */
-  RANKFLOW_WEBHOOK_URL: "",
+  RANKFLOW_WEBHOOK_URL: "https://services.leadconnectorhq.com/hooks/oJyfQVqrbosEEz3hI106/webhook-trigger/qEIZ1gKmNEDwgHzAPoNe",
   LEAD_WEBHOOK_URL: "",
   LEAD_SOURCE: "rankflow-optin",
   NEXT_PAGE: "main.html",              // where the survey sends people after submit
